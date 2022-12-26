@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "27-12-2022_WPF_Calculator_Fishman/1.0.0": {
+        "runtime": {
+          "27-12-2022_WPF_Calculator_Fishman.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "27-12-2022_WPF_Calculator_Fishman/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
