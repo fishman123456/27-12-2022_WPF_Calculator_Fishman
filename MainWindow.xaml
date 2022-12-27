@@ -24,32 +24,32 @@
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="Texbox1" Grid.ColumnSpan="4" TextWrapping="Wrap" Text="TextBox1" Height="54" FontSize="20"/>
-            <TextBox x:Name="TextBox2" Grid.ColumnSpan="4" TextWrapping="Wrap" Text="TextBox2" Grid.Row="1" Height="54" VerticalAlignment="Top" FontSize="24"/>
-            <Button Content="5" Grid.Column="1" Grid.Row="5" FontSize="24"/>
-            <Button Content="8" Grid.Row="4" Grid.Column="1" FontSize="24"/>
-            <Button Content="x2" Grid.Column="1" Grid.Row="3" FontSize="24"/>
-            <Button Content="CE" Grid.Row="2" Grid.Column="1" FontSize="24"/>
-            <Button Content="Help" Grid.Row="7" FontSize="24"/>
-            <Button Content="1" Grid.Row="6" FontSize="24"/>
-            <Button Content="4" Grid.Row="5" FontSize="24"/>
-            <Button Content="7" Grid.Row="4" FontSize="24"/>
-            <Button Content="1/x" Grid.Row="3" FontSize="24"/>
-            <Button Content="%" Grid.Row="2" FontSize="24"/>
-            <Button Content="=" Grid.Column="3" Grid.Row="7" FontSize="24"/>
-            <Button Content="+" Grid.Column="3" Grid.Row="6" FontSize="24"/>
-            <Button Content="-" Grid.Column="3" Grid.Row="5" FontSize="24"/>
-            <Button Content="X" Grid.Column="3" Grid.Row="4" FontSize="24"/>
-            <Button Content="/" Grid.Column="3" Grid.Row="3" FontSize="24"/>
-            <Button Content="Back" Grid.Column="3" Grid.Row="2" FontSize="24"/>
-            <Button Content="." Grid.Column="2" Grid.Row="7" FontSize="24"/>
-            <Button Content="3" Grid.Row="6" Grid.Column="2" FontSize="24"/>
-            <Button Content="6" Grid.Column="2" Grid.Row="5" FontSize="24"/>
-            <Button Content="9" Grid.Column="2" Grid.Row="4" FontSize="24"/>
-            <Button Content="sqrt" Grid.Column="2" Grid.Row="3" FontSize="24"/>
-            <Button Content="C" Grid.Column="2" Grid.Row="2" FontSize="24"/>
-            <Button Content="0" Grid.Column="1" Grid.Row="7" FontSize="24"/>
-            <Button Content="2" Grid.Column="1" Grid.Row="6" FontSize="24"/>
+            <TextBox x:Name="Texbox1" Grid.ColumnSpan="4" TextWrapping="Wrap" Height="54" FontSize="20"/>
+            <TextBox x:Name="TextBox2" Grid.ColumnSpan="4" TextWrapping="Wrap" Grid.Row="1" Height="54" VerticalAlignment="Top" FontSize="24" TextChanged="TextBox2_TextChanged" Text="0" FontStyle="Italic" TextAlignment="Right"/>
+            <Button Content="5" Name="five" Grid.Column="1" Grid.Row="5" FontSize="24" Click="five_Click"/>
+            <Button Content="8" Name="eith" Grid.Row="4" Grid.Column="1" FontSize="24" Click="eith_Click"/>
+            <Button Content="x2" Name="x2" Grid.Column="1" Grid.Row="3" FontSize="24"/>
+            <Button Content="CE" Name="CE" Grid.Row="2" Grid.Column="1" FontSize="24"/>
+            <Button Content="help" Name="help" Grid.Row="7" FontSize="24"/>
+            <Button Content="1" Name="one" Grid.Row="6" FontSize="24" Click="one_Click"/>
+            <Button Content="4" Name="four" Grid.Row="5" FontSize="24" Click="four_Click"/>
+            <Button Content="7" Name="seven" Grid.Row="4" FontSize="24" Click="seven_Click"/>
+            <Button Content="1/x" Name="one_to_x" Grid.Row="3" FontSize="24"/>
+            <Button Content="%" Name="proc" Grid.Row="2" FontSize="24"/>
+            <Button Content="=" Name="equ" Grid.Column="3" Grid.Row="7" FontSize="24" Click="equ_Click"/>
+            <Button Content="+" Name="plus" Grid.Column="3" Grid.Row="6" FontSize="24"/>
+            <Button Content="-" Name="minus" Grid.Column="3" Grid.Row="5" FontSize="24"/>
+            <Button Content="X" Name="multi" Grid.Column="3" Grid.Row="4" FontSize="24"/>
+            <Button Content="/" Name="delim" Grid.Column="3" Grid.Row="3" FontSize="24"/>
+            <Button Content="Back" Name="Back" Grid.Column="3" Grid.Row="2" FontSize="24"/>
+            <Button Content="." Name="point" Grid.Column="2" Grid.Row="7" FontSize="24" Click="point_Click"/>
+            <Button Content="3" Name="thre" Grid.Row="6" Grid.Column="2" FontSize="24" Click="thre_Click"/>
+            <Button Content="6" Name="six" Grid.Column="2" Grid.Row="5" FontSize="24" Click="six_Click"/>
+            <Button Content="9" Name="nine" Grid.Column="2" Grid.Row="4" FontSize="24" Click="nine_Click"/>
+            <Button Content="sqrt" Name="sqrt" Grid.Column="2" Grid.Row="3" FontSize="24"/>
+            <Button Content="C" Name="clear" Grid.Column="2" Grid.Row="2" FontSize="24" Click="clear_Click"/>
+            <Button Content="0" Name="zero" Grid.Column="1" Grid.Row="7" FontSize="24" Click="zero_Click"/>
+            <Button Content="2" Name="two" Grid.Column="1" Grid.Row="6" FontSize="24" Click="two_Click"/>
         </Grid>
 
 
