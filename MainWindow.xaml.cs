@@ -31,6 +31,10 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         {
 
         }
+        private void Texbox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
         private void one_Click(object sender, RoutedEventArgs e)
         {
             if (TextBox2.Text == "0")
@@ -120,11 +124,15 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void point_Click(object sender, RoutedEventArgs e)
         {
             // string textb2 = TextBox2.Text.Length()
-          
-               // TextBox2.Text = TextBox2.Text + ".";
-                bool point_clik = true;
-            
-           
+            if (TextBox2.Text == "")
+            {
+                TextBox2.Text = "0";
+            }
+            if (!point_clik)
+            {
+                TextBox2.Text = TextBox2.Text + ".";
+                point_clik = true;
+            }  
         }
 
         private void equ_Click(object sender, RoutedEventArgs e)
@@ -135,7 +143,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void clear_Click(object sender, RoutedEventArgs e)
         {
             TextBox2.Clear();
-            bool point_clik = false;
+            point_clik = false;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -149,7 +157,8 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void plus_Click(object sender, RoutedEventArgs e)
         {
             string _one = TextBox2.Text;
-            Texbox1.Text += _one;
+            Texbox1.Text += _one + "+";
+            point_clik = false;
             TextBox2.Clear();
         }
         public string ProvLastChar(char j) // функция проверки на второй знак действия + - * /
@@ -177,5 +186,15 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             }
 
         }
+
+        private void CE_Click(object sender, RoutedEventArgs e)
+        {
+            point_clik = false;
+            
+            TextBox2.Clear();
+          
+        }
+
+       
     }
 }
