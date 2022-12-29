@@ -21,11 +21,11 @@ namespace _27_12_2022_WPF_Calculator_Fishman
     public partial class MainWindow : Window
     {
         bool point_clik = false;
-        char last_char;
-        string _one;
-        string _two;
+        char last_char = ' ';
+        string _one = "";
+        string _two = "";
         int result;
-        string znak;
+        string znak = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -145,21 +145,24 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             TextBox1.Text += _two;
             if (znak == "+")
             {
-                int result = Convert.ToInt32(_one) + Convert.ToInt32(_two);
+                 result = Convert.ToInt32(_one) + Convert.ToInt32(_two);
             }
             if (znak == "-")
             {
-                int result = Convert.ToInt32(_one) - Convert.ToInt32(_two);
+                 result = Convert.ToInt32(_one) - Convert.ToInt32(_two);
             }
             if (znak == "*")
             {
-                int result = Convert.ToInt32(_one) * Convert.ToInt32(_two);
+                 result = Convert.ToInt32(_one) * Convert.ToInt32(_two);
             }
             if (znak == "/")
             {
-                int result = Convert.ToInt32(_one) / Convert.ToInt32(_two);
+                 result = Convert.ToInt32(_one) / Convert.ToInt32(_two);
             }
-            TextBox1.Text +=result;
+            //string result2=result.ToString();
+            TextBox1.Clear();
+            TextBox1.Text = TextBox1.Text+ result.ToString();
+            TextBox2.Clear();
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
@@ -179,8 +182,32 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void plus_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            TextBox1.Text += _one + "+";
+            TextBox1.Text += _one+"+";
             znak = "+";
+            point_clik = false;
+            TextBox2.Clear();
+        }
+        private void minus_Click(object sender, RoutedEventArgs e)
+        {
+            _one = TextBox2.Text;
+            TextBox1.Text += _one + "-";
+            znak = "-";
+            point_clik = false;
+            TextBox2.Clear();
+        }
+        private void multi_Click(object sender, RoutedEventArgs e)
+        {
+            _one = TextBox2.Text;
+            TextBox1.Text += _one + "*";
+            znak = "*";
+            point_clik = false;
+            TextBox2.Clear();
+        }
+        private void delim_Click(object sender, RoutedEventArgs e)
+        {
+            _one = TextBox2.Text;
+            TextBox1.Text += _one + "/";
+            znak = "/";
             point_clik = false;
             TextBox2.Clear();
         }
@@ -193,6 +220,12 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             _two = "";
 
         }
+
+        
+
+
+
+
         //public string ProvLastChar(char j) // функция проверки на второй знак действия + - * /
         //{
         //    char[] chars = TextBox2.Text.ToCharArray();
