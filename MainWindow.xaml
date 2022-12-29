@@ -24,7 +24,7 @@
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="Texbox1" Grid.ColumnSpan="4" TextWrapping="Wrap" FontSize="20" TextChanged="Texbox1_TextChanged"/>
+            <TextBox x:Name="TextBox1" Grid.ColumnSpan="4" TextWrapping="Wrap" FontSize="20" TextChanged="TexBox1_TextChanged"/>
             <TextBox x:Name="TextBox2" Grid.ColumnSpan="4" TextWrapping="Wrap" Grid.Row="1" FontSize="24" TextChanged="TextBox2_TextChanged" Text="0" FontStyle="Italic" TextAlignment="Right"/>
             <Button Content="5" Name="five" Grid.Column="1" Grid.Row="5" FontSize="24" Click="five_Click"/>
             <Button Content="8" Name="eith" Grid.Row="4" Grid.Column="1" FontSize="24" Click="eith_Click"/>

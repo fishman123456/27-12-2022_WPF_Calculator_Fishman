@@ -22,6 +22,10 @@ namespace _27_12_2022_WPF_Calculator_Fishman
     {
         bool point_clik = false;
         char last_char;
+        string _one;
+        string _two;
+        int result;
+        string znak;
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +35,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         {
 
         }
-        private void Texbox1_TextChanged(object sender, TextChangedEventArgs e)
+        private void TexBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -137,7 +141,25 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void equ_Click(object sender, RoutedEventArgs e)
         {
-
+             _two = TextBox2.Text;
+            TextBox1.Text += _two;
+            if (znak == "+")
+            {
+                int result = Convert.ToInt32(_one) + Convert.ToInt32(_two);
+            }
+            if (znak == "-")
+            {
+                int result = Convert.ToInt32(_one) - Convert.ToInt32(_two);
+            }
+            if (znak == "*")
+            {
+                int result = Convert.ToInt32(_one) * Convert.ToInt32(_two);
+            }
+            if (znak == "/")
+            {
+                int result = Convert.ToInt32(_one) / Convert.ToInt32(_two);
+            }
+            TextBox1.Text +=result;
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
@@ -156,45 +178,49 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void plus_Click(object sender, RoutedEventArgs e)
         {
-            string _one = TextBox2.Text;
-            Texbox1.Text += _one + "+";
+            _one = TextBox2.Text;
+            TextBox1.Text += _one + "+";
+            znak = "+";
             point_clik = false;
             TextBox2.Clear();
         }
-        public string ProvLastChar(char j) // функция проверки на второй знак действия + - * /
-        {
-            char[] chars = TextBox2.Text.ToCharArray();
-            int numLastChar = chars.Length;
-            try
-            {
-                char last_char = chars[numLastChar - 1];
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Введите число");
-                TextBox2.Text.DefaultIfEmpty();
-
-            }
-
-            if (last_char != '+' && last_char != '-' && last_char != '/' && last_char != '*')
-            {
-                return TextBox2.Text += j;
-            }
-            else
-            {
-                return TextBox2.Text;
-            }
-
-        }
-
         private void CE_Click(object sender, RoutedEventArgs e)
         {
             point_clik = false;
-            
+            TextBox1.Clear();
             TextBox2.Clear();
-          
-        }
+            _one = "";
+            _two = "";
 
-       
+        }
+        //public string ProvLastChar(char j) // функция проверки на второй знак действия + - * /
+        //{
+        //    char[] chars = TextBox2.Text.ToCharArray();
+        //    int numLastChar = chars.Length;
+        //    try
+        //    {
+        //        char last_char = chars[numLastChar - 1];
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Введите число");
+        //        TextBox2.Text.DefaultIfEmpty();
+
+        //    }
+
+        //    if (last_char != '+' && last_char != '-' && last_char != '/' && last_char != '*')
+        //    {
+        //        return TextBox2.Text += j;
+        //    }
+        //    else
+        //    {
+        //        return TextBox2.Text;
+        //    }
+
+        //}
+
+
+
+
     }
 }
