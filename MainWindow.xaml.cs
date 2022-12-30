@@ -141,6 +141,11 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void equ_Click(object sender, RoutedEventArgs e)
         {
+            if (result!=0)
+            {
+                _one = result.ToString();
+                TextBox1.Clear();
+            }
              _two = TextBox2.Text;
             TextBox1.Text += _two;
             if (znak == "+")
