@@ -138,7 +138,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
                 point_clik = true;
             }  
         }
-
+         
         private void equ_Click(object sender, RoutedEventArgs e)
         {
             if (result!=0)
@@ -169,8 +169,9 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             TextBox1.Text = TextBox1.Text+ result.ToString();
             TextBox2.Clear();
         }
-
-        private void clear_Click(object sender, RoutedEventArgs e)
+    
+	
+private void clear_Click(object sender, RoutedEventArgs e)
         {
             TextBox2.Clear();
             point_clik = false;
@@ -221,8 +222,9 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             point_clik = false;
             TextBox1.Clear();
             TextBox2.Clear();
-            _one = "";
-            _two = "";
+            _one = "0";
+            _two = "0";
+            result = 0;
 
         }
 
