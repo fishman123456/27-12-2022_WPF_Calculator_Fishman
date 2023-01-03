@@ -21,15 +21,14 @@ namespace _27_12_2022_WPF_Calculator_Fishman
     public partial class MainWindow : Window
     {
         bool point_clik = false;
-        char last_char = ' ';
-        string _one = "";
-        string _two = "";
-        int result;
+        string _one = "0";
+        string _two = "0";
+        double result = 0;
         string znak = "";
         public MainWindow()
         {
             InitializeComponent();
-           
+
         }
         private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -41,77 +40,136 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         }
         private void one_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+         
+            }
+            if (znak=="!" && TextBox1.Text != "")
+            {
+                 TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "1";
         }
 
         private void two_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+           //     TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "2";
         }
 
         private void thre_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+             //   TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "3";
         }
 
         private void four_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+               // TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "4";
         }
 
         private void five_Click(object sender, RoutedEventArgs e)
         {
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            {
+                TextBox2.Clear();
+               // TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
+            }
             TextBox2.Text = TextBox2.Text + "5";
         }
 
         private void six_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+                //TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "6";
         }
 
         private void seven_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+                //TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "7";
         }
 
         private void eith_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+               // TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "8";
         }
 
         private void nine_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0")
+            if (TextBox2.Text == "0" || TextBox2.Text == "0")
             {
-                TextBox2.Clear();
+               TextBox2.Clear();
+                //TextBox1.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "9";
         }
@@ -121,6 +179,11 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
+            }
+            if (znak == "!" && TextBox1.Text != "")
+            {
+                TextBox1.Clear();
+                result = 0;
             }
             TextBox2.Text = TextBox2.Text + "0";
         }
@@ -136,44 +199,50 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             {
                 TextBox2.Text = TextBox2.Text + ".";
                 point_clik = true;
-            }  
+            }
         }
-         
+
         private void equ_Click(object sender, RoutedEventArgs e)
         {
-            if (result!=0)
+            if (result != 0)
             {
                 _one = result.ToString();
-                TextBox1.Clear();
+                // TextBox1.Clear();
+                _two = TextBox2.Text.ToString();
             }
-             _two = TextBox2.Text;
-            TextBox1.Text += _two;
+            if (TextBox2.Text != "0")
+            {
+                _two = TextBox2.Text;
+                TextBox1.Text += _two;
+            }
+
             if (znak == "+")
             {
-                 result = Convert.ToInt32(_one) + Convert.ToInt32(_two);
+                result = Convert.ToDouble(_one) + Convert.ToDouble(_two);
             }
             if (znak == "-")
             {
-                 result = Convert.ToInt32(_one) - Convert.ToInt32(_two);
+                result = Convert.ToDouble(_one) - Convert.ToDouble(_two);
             }
             if (znak == "*")
             {
-                 result = Convert.ToInt32(_one) * Convert.ToInt32(_two);
+                result = Convert.ToDouble(_one) * Convert.ToDouble(_two);
             }
             if (znak == "/")
             {
-                 result = Convert.ToInt32(_one) / Convert.ToInt32(_two);
+                result = Convert.ToDouble(_one) / Convert.ToDouble(_two);
             }
             //string result2=result.ToString();
             TextBox1.Clear();
-            TextBox1.Text = TextBox1.Text+ result.ToString();
-            TextBox2.Clear();
+            TextBox1.Text = TextBox1.Text + result.ToString();
+            TextBox2.Text = "0";
+            znak = "!";
         }
-    
-	
-private void clear_Click(object sender, RoutedEventArgs e)
+
+
+        private void clear_Click(object sender, RoutedEventArgs e)
         {
-            TextBox2.Clear();
+            TextBox2.Text = "0";
             point_clik = false;
         }
 
@@ -188,40 +257,70 @@ private void clear_Click(object sender, RoutedEventArgs e)
         private void plus_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            TextBox1.Text += _one+"+";
+            if (_one != "0")
+            {
+                TextBox1.Text += _one + "+";
+            }
+            else
+            {
+                TextBox1.Text += "+";
+            }
+
             znak = "+";
             point_clik = false;
-            TextBox2.Clear();
+            TextBox2.Text = "0";
         }
         private void minus_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            TextBox1.Text += _one + "-";
+            if (_one != "0")
+            {
+                TextBox1.Text += _one + "-";
+            }
+            else
+            {
+                TextBox1.Text += "-";
+            }
             znak = "-";
             point_clik = false;
-            TextBox2.Clear();
+            TextBox2.Text = "0";
         }
         private void multi_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            TextBox1.Text += _one + "*";
+
+            if (_one != "0")
+            {
+                TextBox1.Text += _one + "*";
+            }
+            else
+            {
+                TextBox1.Text += "*";
+            }
             znak = "*";
             point_clik = false;
-            TextBox2.Clear();
+            TextBox2.Text = "0";
         }
         private void delim_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            TextBox1.Text += _one + "/";
+            if (_one != "0")
+            {
+                TextBox1.Text += _one + "/";
+            }
+            else
+            {
+                TextBox1.Text += "/";
+            }
             znak = "/";
             point_clik = false;
-            TextBox2.Clear();
+            TextBox2.Text = "0";
         }
         private void CE_Click(object sender, RoutedEventArgs e)
         {
             point_clik = false;
-            TextBox1.Clear();
-            TextBox2.Clear();
+            TextBox1.Text = "0";
+            TextBox2.Text = "0";
             _one = "0";
             _two = "0";
             result = 0;
@@ -229,6 +328,8 @@ private void clear_Click(object sender, RoutedEventArgs e)
         }
 
         
+
+
 
 
 
