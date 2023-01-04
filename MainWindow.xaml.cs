@@ -24,12 +24,101 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         string _one = "0";
         string _two = "0";
         double result = 0;
-        string znak = "";
+        string znak = "!";
         public MainWindow()
         {
             InitializeComponent();
+            if (Keyboard.IsKeyDown(Key.NumPad1))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "1";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad2))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "2";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad2))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "3";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad2))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "3";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad4))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "4";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad5))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "5";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad6))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "6";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad7))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "7";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad8))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "8";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad9))
+            {
+                if (TextBox2.Text == "0")
+                {
+                    TextBox2.Clear();
+                }
+                TextBox2.Text = TextBox2.Text + "9";
+            }
+            if (Keyboard.IsKeyDown(Key.NumPad0))
+            {
+                if (TextBox2.Text == "0")
+                {
 
+                }
+                TextBox2.Text = TextBox2.Text + "0";
+            }
         }
+
+    
         private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -40,7 +129,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         }
         private void one_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0" )
             {
                 TextBox2.Clear();
          
@@ -56,7 +145,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void two_Click(object sender, RoutedEventArgs e)
         {
 
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
            //     TextBox1.Clear();
@@ -71,7 +160,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void thre_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
              //   TextBox1.Clear();
@@ -86,7 +175,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void four_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
                // TextBox1.Clear();
@@ -101,7 +190,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void five_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
                // TextBox1.Clear();
@@ -116,7 +205,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void six_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
                 //TextBox1.Clear();
@@ -131,7 +220,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void seven_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
                 //TextBox1.Clear();
@@ -146,7 +235,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void eith_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                 TextBox2.Clear();
                // TextBox1.Clear();
@@ -161,7 +250,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
 
         private void nine_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox2.Text == "0" || TextBox2.Text == "0")
+            if (TextBox2.Text == "0")
             {
                TextBox2.Clear();
                 //TextBox1.Clear();
@@ -171,6 +260,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
                 TextBox1.Clear();
                 result = 0;
             }
+          
             TextBox2.Text = TextBox2.Text + "9";
         }
 
@@ -187,21 +277,16 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             }
             TextBox2.Text = TextBox2.Text + "0";
         }
-
         private void point_Click(object sender, RoutedEventArgs e)
         {
             // string textb2 = TextBox2.Text.Length()
-            if (TextBox2.Text == "")
+
+            if ((!point_clik) && !TextBox2.Text.Contains(','))
             {
-                TextBox2.Text = "0";
-            }
-            if (!point_clik)
-            {
-                TextBox2.Text = TextBox2.Text + ".";
+                TextBox2.Text += ",";
                 point_clik = true;
             }
         }
-
         private void equ_Click(object sender, RoutedEventArgs e)
         {
             if (result != 0)
@@ -235,8 +320,8 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             //string result2=result.ToString();
             TextBox1.Clear();
             TextBox1.Text = TextBox1.Text + result.ToString();
-            TextBox2.Text = "0";
-            znak = "!";
+            TextBox2.Clear();
+            znak = "";
         }
 
 
@@ -257,111 +342,55 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         private void plus_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            if (_one != "0")
+            if (!TextBox1.Text.Contains('+'))
             {
-                TextBox1.Text += _one + "+";
+                znak= "+";
+                TextBox1.Text +=TextBox2.Text + "+";
+                point_clik = false;
             }
-            else
-            {
-                TextBox1.Text += "+";
-            }
-
-            znak = "+";
-            point_clik = false;
-            TextBox2.Text = "0";
+            TextBox2.Clear();
         }
         private void minus_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            if (_one != "0")
+            if (!TextBox1.Text.Contains('-'))
             {
-                TextBox1.Text += _one + "-";
+                znak = "-";
+                TextBox1.Text += TextBox2.Text + "-";
+                point_clik = false;
             }
-            else
-            {
-                TextBox1.Text += "-";
-            }
-            znak = "-";
-            point_clik = false;
-            TextBox2.Text = "0";
+            TextBox2.Clear();
         }
         private void multi_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-
-            if (_one != "0")
+            if (!TextBox1.Text.Contains('*'))
             {
-                TextBox1.Text += _one + "*";
+                znak = "*";
+                TextBox1.Text += TextBox2.Text + "*";
+                point_clik = false;
             }
-            else
-            {
-                TextBox1.Text += "*";
-            }
-            znak = "*";
-            point_clik = false;
-            TextBox2.Text = "0";
+            TextBox2.Clear();
         }
         private void delim_Click(object sender, RoutedEventArgs e)
         {
             _one = TextBox2.Text;
-            if (_one != "0")
+            if (!TextBox1.Text.Contains('/'))
             {
-                TextBox1.Text += _one + "/";
+                znak = "/";
+                TextBox1.Text += TextBox2.Text + "/";
+                point_clik = false;
             }
-            else
-            {
-                TextBox1.Text += "/";
-            }
-            znak = "/";
-            point_clik = false;
-            TextBox2.Text = "0";
+            TextBox2.Clear();
         }
         private void CE_Click(object sender, RoutedEventArgs e)
         {
             point_clik = false;
-            TextBox1.Text = "0";
+            TextBox1.Text = "";
             TextBox2.Text = "0";
             _one = "0";
             _two = "0";
             result = 0;
-
         }
-
-        
-
-
-
-
-
-
-        //public string ProvLastChar(char j) // функция проверки на второй знак действия + - * /
-        //{
-        //    char[] chars = TextBox2.Text.ToCharArray();
-        //    int numLastChar = chars.Length;
-        //    try
-        //    {
-        //        char last_char = chars[numLastChar - 1];
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Введите число");
-        //        TextBox2.Text.DefaultIfEmpty();
-
-        //    }
-
-        //    if (last_char != '+' && last_char != '-' && last_char != '/' && last_char != '*')
-        //    {
-        //        return TextBox2.Text += j;
-        //    }
-        //    else
-        //    {
-        //        return TextBox2.Text;
-        //    }
-
-        //}
-
-
-
-
     }
 }

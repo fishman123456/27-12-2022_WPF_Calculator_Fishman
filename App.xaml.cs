@@ -13,5 +13,6 @@ namespace _27_12_2022_WPF_Calculator_Fishman
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
