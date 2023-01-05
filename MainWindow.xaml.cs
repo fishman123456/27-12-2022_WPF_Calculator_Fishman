@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,101 +29,16 @@ namespace _27_12_2022_WPF_Calculator_Fishman
         public MainWindow()
         {
             InitializeComponent();
-            if (Keyboard.IsKeyDown(Key.NumPad1))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "1";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad2))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "2";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad2))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "3";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad2))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "3";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad4))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "4";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad5))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "5";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad6))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "6";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad7))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "7";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad8))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "8";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad9))
-            {
-                if (TextBox2.Text == "0")
-                {
-                    TextBox2.Clear();
-                }
-                TextBox2.Text = TextBox2.Text + "9";
-            }
-            if (Keyboard.IsKeyDown(Key.NumPad0))
-            {
-                if (TextBox2.Text == "0")
-                {
-
-                }
-                TextBox2.Text = TextBox2.Text + "0";
-            }
         }
-
-    
+        //private void TextBox2_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    TextBox1.Text += e.Key.ToString();
+        //}
         private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            TextBox2.Text = Regex.Replace(TextBox2.Text, "[^0-9 ,]+", "");
         }
+
         private void TexBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -348,7 +264,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
                 TextBox1.Text +=TextBox2.Text + "+";
                 point_clik = false;
             }
-            TextBox2.Clear();
+            TextBox2.Text="";
         }
         private void minus_Click(object sender, RoutedEventArgs e)
         {
@@ -392,5 +308,7 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             _two = "0";
             result = 0;
         }
+
+       
     }
 }
