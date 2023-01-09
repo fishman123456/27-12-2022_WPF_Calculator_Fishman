@@ -309,6 +309,28 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             result = 0;
         }
 
-       
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Add)
+            {
+                plus_Click(plus_Click, null);
+            }
+            if (e.Key == Key.Subtract)
+            {
+                minus_Click(minus_Click, null);
+            }
+            if (e.Key == Key.Divide)
+            {
+                delim_Click(delim_Click, null);
+            }
+            if (e.Key == Key.Multiply)
+            {
+                multi_Click(multi_Click, null);
+            }
+            if (e.Key == Key.Enter)
+            {
+                equ_Click(equ_Click, null);
+            }
+        }
     }
 }
