@@ -216,7 +216,10 @@ namespace _27_12_2022_WPF_Calculator_Fishman
                 _two = TextBox2.Text;
                 TextBox1.Text += _two;
             }
+            try
+            {
 
+           
             if (znak == "+")
             {
                 result = Convert.ToDouble(_one) + Convert.ToDouble(_two);
@@ -238,6 +241,12 @@ namespace _27_12_2022_WPF_Calculator_Fishman
             TextBox1.Text = TextBox1.Text + result.ToString();
             TextBox2.Clear();
             znak = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+               
+            }
         }
 
 
