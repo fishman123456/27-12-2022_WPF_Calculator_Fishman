@@ -216,6 +216,14 @@ namespace _27_12_2022_WPF_Calculator_Fishman
                 _two = TextBox2.Text;
                 TextBox1.Text += _two;
             }
+            if (TextBox1.Text == "∞") 
+            {
+                MessageBox.Show ("Деление на ноль!");
+                TextBox1.Clear();
+                result= 0;
+               
+
+            }
             try
             {
 
